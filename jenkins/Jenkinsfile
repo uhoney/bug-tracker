@@ -17,7 +17,7 @@ pipeline {
             {
                 dir('bugtracker-backend')
                 {
-                    sh 'go test ./... -v'
+                    sh 'go test -v ./...'
                 }
             }
         }
