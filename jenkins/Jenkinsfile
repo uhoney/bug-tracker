@@ -16,11 +16,18 @@ pipeline {
             environment
             {
                 HOME = "${WORKSPACE}"
+                GOCACHE = "${WORKSPACE}/.gocache"
             }
             steps
             {
                 dir('bugtracker-backend')
                 {
+                    sh '''
+                    id
+                    echo HOME=$HOME
+                    echo WORKSPACE=$WORKSPACE
+                    go env
+                    '''
                     sh 'go test -v ./...'
                 }
             }
