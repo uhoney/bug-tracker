@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir('bugtracker-backend')
                 {
-                    go test -v ./...
+                    sh 'go test ./... -v'
                 }
             }
         }
