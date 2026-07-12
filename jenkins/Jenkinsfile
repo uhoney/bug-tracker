@@ -17,6 +17,7 @@ pipeline {
             {
                 HOME = "${WORKSPACE}"
                 GOCACHE = "${WORKSPACE}/.gocache"
+                GOMODCACHE = "${WORKSPACE}/.gomodcache"
             }
             steps
             {
